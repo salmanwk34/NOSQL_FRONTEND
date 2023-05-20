@@ -23,7 +23,7 @@ export class LoginComponent {
       (response: any) => {
         console.log('Connexion reussie', response);
         this.message = 'Connexion reussie';
-        this.authService.setUserInfo(response); // Ajout de cette ligne
+        this.authService.setUserInfo(response);
         this.model = {};
         this.router.navigate(['/dashboard']); // Naviguer vers le tableau de bord après une connexion réussie
       },
