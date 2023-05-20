@@ -1,0 +1,50 @@
+.project-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h3 {
+  margin: 0;
+  color: #444;
+}
+
+p {
+  margin: 5px 0 0;
+  color: #666;
+}
+
+.edit-button, .delete-button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.delete-button {
+  background-color: #f44336; /* Red */
+  color: white;
+}

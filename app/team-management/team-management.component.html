@@ -1,0 +1,30 @@
+<div class="team-management-container">
+  <h1>Gestion de l'equipe</h1>
+
+  <div class="invite-member">
+    <h2>Inviter un membre</h2>
+    <label>Email: <input [(ngModel)]="inviteEmail" type="email" placeholder="Entrez l'email"></label>
+    <button (click)="inviteMember()">Inviter</button>
+  </div>
+
+  <div class="set-role">
+    <h2>Definir un role</h2>
+    <label>Email: <input [(ngModel)]="inviteEmail" type="email" placeholder="Entrez l'email"></label>
+    <label>Role: <input [(ngModel)]="userRole" type="text" placeholder="Entrez le role"></label>
+    <button (click)="setRole()">Definir le role</button>
+  </div>
+
+  <div class="assign-task">
+    <h2>Attribuer une tache</h2>
+    <label>Email: <input [(ngModel)]="inviteEmail" type="email" placeholder="Entrez l'email"></label>
+    <label>ID de tache: <input [(ngModel)]="taskId" type="text" placeholder="Entrez l'ID de la tache"></label>
+    <button (click)="assignTask()">Attribuer la tache</button>
+  </div>
+
+  <div class="track-progress">
+    <h2>Suivre la progression</h2>
+    <label>ID de tache: <input [(ngModel)]="taskId" type="text" placeholder="Entrez l'ID de la tache"></label>
+    <label>Progression: <input [(ngModel)]="progress" type="number" placeholder="Entrez la progression"></label>
+    <button (click)="trackProgress()">Suivre la progression</button>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion de projet</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a routerLink="/login" *ngIf="!authService.isLoggedIn()">Se connecter</a></li>
+      <li><a routerLink="/signup" *ngIf="!authService.isLoggedIn()">S'inscrire</a></li>
+      <li><a routerLink="/dashboard" *ngIf="authService.isLoggedIn()">EN TRAVAUX</a></li>
+      <li><a routerLink="/projects" *ngIf="authService.isLoggedIn()">Creation de Projet</a></li>
+      <li><a routerLink="list" *ngIf="authService.isLoggedIn()">Listes des projets</a></li>
+      <li><a routerLink="team-management" *ngIf="authService.isLoggedIn()">Gestion d'equipe</a></li>
+      <li><a routerLink="calendar-sync" *ngIf="authService.isLoggedIn()">Calendrier</a></li>   
+ </ul>
+    <button class="logout" *ngIf="authService.isLoggedIn()" (click)="logout()">Se deconnecter</button>
+  </nav>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</body>
+</html>

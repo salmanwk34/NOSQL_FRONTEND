@@ -1,0 +1,19 @@
+<div class="project-container">
+  <h2>Liste des Projets</h2>
+  <ul>
+    <li *ngFor="let project of projects">
+      <div *ngIf="!project.editing" class="project">
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.description }}</p>
+        <button class="edit-button" (click)="editProject(project)">Modifier</button>
+        <button class="delete-button" (click)="deleteProject(project._id)">Supprimer</button>
+      </div>
+      <div *ngIf="project.editing" class="project-edit">
+        <input [(ngModel)]="project.name">
+        <input [(ngModel)]="project.description">
+        <button (click)="confirmEdit(project)">Confirmer</button>
+        <button (click)="project.editing = false">Annuler</button>
+      </div>
+    </li>
+  </ul>
+</div>
